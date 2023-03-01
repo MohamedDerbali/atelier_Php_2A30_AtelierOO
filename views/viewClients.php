@@ -1,6 +1,7 @@
 <?php
 include "../models/client.php";
 include "../controllers/clientC.php";
+include "../models/connection.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,6 +17,7 @@ include "../controllers/clientC.php";
     $clientC = new clientC();
     echo '<h1>Liste des clients</h1>';
     $clientC->showClient($client);
+    $clientC->addClient($client, $pdo);
     ?>
 </body>
 </html>
